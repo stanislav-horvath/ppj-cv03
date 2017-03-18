@@ -22,9 +22,9 @@ public class Assignment3Impl implements Assignment3 {
     public int sumOfDivisibleInRange(int from, int to, List<Integer> divisibleBy){
 
         return IntStream.range(from, to).boxed()
-                .filter(number -> 
-						divisiblesBy.stream().allMatch(div -> 
-													  number % div == 0)
+                .filter(number ->
+						divisiblesBy.stream().allMatch(div ->
+								number % div == 0)
 				)
                 .mapToInt(i -> i).sum();
 
